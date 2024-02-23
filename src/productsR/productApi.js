@@ -1,9 +1,9 @@
 import axios from "axios";
+import { ADDPRODUCT, FETCHPROD } from "../constant";
 export function fetchProduct() {
-  
-    return axios.get( `https://kabra-backend.vercel.app/products/get-all-product`)
+    return axios.get(FETCHPROD )
 }
 
 export function addProduct( formData ){
-    return axios.post( `https://kabra-backend.vercel.app/products/add-product` ,  formData  )
+    return axios.post( ADDPRODUCT ,  formData  )
 }

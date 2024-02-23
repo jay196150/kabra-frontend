@@ -1,22 +1,22 @@
 import axios from "axios";
+import { FETCHCARTPRODUCT , ADDCARTPRODUCT ,DELETPRO,DESCQUNT ,INCREQUNT } from "../constant";
 export function fetchCartProduct() {
-    return axios.get( `https://kabra-backend.vercel.app/card/get-all-card-product` )
+    return axios.get( FETCHCARTPRODUCT )
 }
 
 export function addCartProduct( cartProduct  ) {
-    return axios.post( `https://kabra-backend.vercel.app/card/add-card-product` , {cartProduct} )
+    return axios.post( ADDCARTPRODUCT , {cartProduct} )
 }
 
 export function incrCartProductQut( id ) {
-    console.log("incall" ,id)
-    return axios.put( `https://kabra-backend.vercel.app/card/add-card-product-qtn`,{ id } )
+  
+    return axios.put( INCREQUNT,{ id } )
 }
 
 export function decrCartProductQut(id) {
-    return axios.put( `https://kabra-backend.vercel.app/card/sub-card-product-qtn` , {id} )
+    return axios.put( DESCQUNT , {id} )
 }
 
 export function deletCartProduct(id) {
-    console.log( "xxcc" , id)
-    return axios.delete( `https://kabra-backend.vercel.app/card/delete-card-product/${id}` )
+    return axios.delete( `${DELETPRO}/${id}` )
 }
