@@ -5,5 +5,5 @@ export function fetchProduct() {
 }
 
 export function addProduct( formData ){
-    return axios.post( `http://localhost:3000/products/add-product` , { formData } )
+    return axios.post( `https://kabra-backend.vercel.app/products/add-product` ,  formData  )
 }
