@@ -1,4 +1,4 @@
-const Url = "https://kabra-backend.vercel.app";
+const Url =  "http://localhost:3000"  //"https://kabra-backend.vercel.app";
 const localhost = "http://localhost:3000";
 
 // cart API
